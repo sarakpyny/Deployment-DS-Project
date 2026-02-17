@@ -146,7 +146,8 @@ pipe.fit(X_train, y_train)
 rdmf_score = pipe.score(X_test, y_test)
 rdmf_score_tr = pipe.score(X_train, y_train)
 
-logging.info(f"{rdmf_score:.1%} de bonnes réponses sur les données de test pour validation")
+logging.info(
+    f"{rdmf_score:.1%} de bonnes réponses sur les données de test pour validation")
 
 logging.info("Matrice de confusion:")
 logging.info(confusion_matrix(y_test, pipe.predict(X_test)))
