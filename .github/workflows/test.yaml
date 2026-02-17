@@ -30,11 +30,11 @@ jobs:
 
       - name: Install pylint
         run: |
-          uv pip install pylint
+          uv add --dev pylint
 
       - name: Run pylint
         run: |
-          pylint src main.py --fail-under=5
+          uv run pylint src main.py --fail-under=5
 
       - name: Run application
         env:
